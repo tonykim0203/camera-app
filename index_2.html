@@ -1,0 +1,33 @@
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Camera App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div>
+    <main id="camera">
+
+        <canvas id="camera--sensor"></canvas>
+
+        <video id="camera--view" autoplay playsinline></video>
+
+        <img src="/img/camera_frame3.png" id="layer_img"/>
+
+        <img src="//:0" alt="" id="camera--output">
+        <!--촬영 버튼-->
+        <button id="camera--trigger">
+            <img src="/img/camera3.png" alt="buttonpng" border="0" />
+        </button>
+    </main>
+    <script src="app_2.js"></script>
+</div>
+</body>
+
+</html>

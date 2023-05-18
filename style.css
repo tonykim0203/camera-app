@@ -1,0 +1,97 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#camera--view, #camera--sensor, #camera--output{
+    transform: scaleX(-1);
+    filter: FlipH;
+    width: 100%;
+}
+
+.camera-content {
+    position: relative;
+    z-index: 1;
+}
+
+/*서류 레이어*/
+#layer_img {
+    width: 70%;
+    height: auto;
+    position: fixed;
+    left: 16%;
+    top: 15%;
+}
+
+/*촬영 버튼*/
+#camera--trigger {
+    width: 100px;
+    background-color: #006494;
+    color: white;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 0px;
+    text-align: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#camera--trigger img {
+    display: block;
+    width: 40%;
+    height: 40%;
+}
+
+/*카메라 전환 버튼*/
+#camera--switch{
+    width: 60px;
+    background-color: #4B92D4;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 35px;
+    left: calc(90% - 65px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#camera--switch img {
+    display: block;
+    width: 35%;
+    height: 35%;
+}
+
+/*촬영된 img*/
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
